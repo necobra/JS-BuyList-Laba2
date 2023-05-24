@@ -21,6 +21,8 @@ body {
 	width: 37%;
 }
 
+/* general styles */
+
 .inline-container {
 	border: 1px;
 	border-style:solid;
@@ -33,10 +35,33 @@ body {
 	display: flex;
 }
 
+button {
+	border-style: none;
+	margin-bottom: 5px;
+}
+
+/* add product panel */
+
 .product-search input {
 	width: 100%;
 	padding: 15px;
+	border-style: solid;
+	border-radius: 5px 0px 0px 5px;
+	border-width: 1px;
 }
+
+.product-search button {
+	display: flex;
+	background-color:rgb(34, 133, 208);
+	box-shadow: 0px 5px 0px 0px rgb(34, 118, 183);
+	border-style: none;
+	border-radius: 0px 5px 5px 0px;
+	color: white;
+	padding: 0px 20px;
+	align-items: center;
+}
+
+
 
 /* product style */
 
@@ -95,3 +120,4 @@ body {
 .none {
 	display: none;
 }
+
