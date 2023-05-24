@@ -1,16 +1,100 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
-    <meta charset="UTF-8">
-    <title>My Page</title>
+<html lang="uk">
 
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="main.css" />
 
-    <link rel="stylesheet" type="text/css" href="main.css" />
+	<title>Laba-2</title>
 </head>
+
 <body>
-	<span class="product-item">
-		Appleфів
-		<span class="amount">4</span>
-	</span>
+
+	<div class="panels">
+		<div class="left-panel">
+			<div class="inline-container">
+				<div class="product-search">
+					<input type="text" placeholder="Назва товару">
+					<button>Додати</button>
+				</div>
+			</div>
+
+			<div class="products">
+				<div class="inline-container">
+					<div class="product">
+						<div class="product-name"><s>Помідори</s></div>
+						<div class="amount">
+							<div class="invisible">
+								<button class="minus">-</button>
+							</div>
+							<div>2</div>
+							<div class="invisible">
+								<button class="plus">+</button>
+							</div>
+						</div>
+						<div class="acts">
+							<button class="btn-bought">Куплено</button>
+							<button class="none">x</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="inline-container">
+					<div class="product">
+						<div class="product-name">Печиво</div>
+						<div class="amount">
+							<div>
+								<button class="minus">-</button>
+							</div>
+							<div>2</div>
+							<div>
+								<button class="plus">+</button>
+							</div>
+						</div>
+						<div class="acts">
+							<button class="btn-bought">Куплено</button>
+							<button class="x">x</button>
+						</div>
+					</div>
+				</div>
+				<div class="inline-container">
+					<div class="product">
+						<div class="product-name">Сир</div>
+						<div class="amount">
+							<div>
+								<button class="minus">-</button>
+							</div>
+							<div>2</div>
+							<div>
+								<button class="plus">+</button>
+							</div>
+						</div>
+						<div class="acts">
+							<button class="btn-bought">Куплено</button>
+							<button class="x">x</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="right-panel">
+			<div class="inline-container"><div class="caption">Залишилося</div></div>
+			<div class="inline-container">
+				<div class="product-list-remainder">
+					<div class="product-card">Печиво<div class="amount-card">2</div></div>
+					<div class="product-card">Сир<div class="amount-card">2</div></div>
+				</div>
+			</div>
+			<div class="inline-container"><div class="caption">Куплено</div></div>
+			<div class="inline-container">
+				<div class="product-list-bought">
+					<div class="product-card"><s>Помідори</s> <div class="amount-card"><s>2</s></div></div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
+
 </html>

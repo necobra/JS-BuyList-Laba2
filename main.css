@@ -1,4 +1,50 @@
-.product-item {
+body {
+	background-color: gainsboro;
+}
+
+.panels {
+	display: flex;
+    justify-content: space-between 
+}
+
+.left-panel, .right-panel {
+	background-color: white;
+	float: left;
+	margin: 1%;
+}
+
+.left-panel {
+	width: 57%;
+}
+
+.right-panel  {
+	width: 37%;
+}
+
+.inline-container {
+	border: 1px;
+	border-style:solid;
+	padding: 10px 15px;
+	height: 40px
+}
+
+.inline-container > div {
+	height: 100%;
+	display: flex;
+}
+
+.product-search input {
+	width: 100%;
+	padding: 15px;
+}
+
+/* product style */
+
+.product{
+    justify-content: space-between;
+}
+
+.product-item1 {
 	background-color: gray;
 	display: inline-block;
 	height: 25px;
@@ -6,7 +52,7 @@
 	border-radius: 5px;
 }
 
-.amount {
+.amount1 {
 	background-color: yellow;
 	border-radius: 10px;
 	
@@ -14,4 +60,38 @@
 	height: 20px;
 	width: 20px;
 	text-align: center;
+}
+
+.product-name
+ {
+	display: flex;
+	align-items: center;
+	width: 30%;
+}
+
+.amount {
+	display: flex;
+	align-items: center;
+	width: 30%;
+}
+
+.amount > div {
+	padding: 3px;
+}
+
+.acts {
+	display: flex;
+	width: 30%;
+	justify-content: right;
+}
+
+
+/* additinal styles */
+
+.invisible {
+	visibility: hidden;
+}
+
+.none {
+	display: none;
 }
