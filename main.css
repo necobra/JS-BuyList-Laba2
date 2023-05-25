@@ -16,6 +16,7 @@ body {
 
 .left-panel {
 	width: 57%;
+	min-width: 320px;
 }
 
 .right-panel  {
@@ -76,6 +77,7 @@ button:hover {
 /* product style */
 
 .product{
+	
     justify-content: space-between;
 
 }
@@ -84,14 +86,20 @@ button:hover {
  {
 	display: flex;
 	align-items: center;
-	width: 30%;
+	width: 20%;
 }
 
 .amount {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 40%;
+	width: 60%;
+}
+
+@media (max-width: 750px) {
+	.amount {
+		justify-content: left;
+	}
 }
 
 .amount > div {
@@ -100,8 +108,9 @@ button:hover {
 
 .acts {
 	display: flex;
-	width: 30%;
+	width: 20%;
 	justify-content: right;
+	align-items: center;
 }
 
 .acts > button {
@@ -114,8 +123,8 @@ button:hover {
 
 	background-color: rgb(232, 232, 232);
 	border-radius: 5px;
-	height: 10px;
-	width: 10px;
+	height: 7px;
+	width: 7px;
 	margin-bottom: 3px;
 
 	font-weight: bold;
@@ -124,9 +133,9 @@ button:hover {
 .minus, .plus {
 	display: inline-block;
 	text-align: center;
-	border-radius: 30px;
-	height: 35px;
-	width: 37px;
+	border-radius: 25px;
+	height: 27px;
+	width: 29px;
 	color: white;
 }
 
@@ -161,9 +170,10 @@ button:hover {
 	border-color: rgb(211, 211, 211);
 	border-radius: 4px;
 	box-shadow: 0px 3px 0px 0px rgb(211, 211, 211);
-	margin-bottom: 9px;
 
-	padding: 0px 20px;
+	height: 30px;
+
+	padding: 0px 10 px;
 }
 
 .btn-bought:hover, .btn-no-bought:hover{
@@ -193,29 +203,38 @@ button:hover {
 }
 /* */
 
+.right-panel .inline-container {
+	height: auto;
+	min-height: 40px;
+}
+
 .caption {
 	display: flex;
   	align-items: center;
   	justify-content: left;
 
 	font-weight: bold;
-	font-size: 1.5em;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+	font-size: 1.2em;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+	margin-top: 5px;
 }
 
 .product-list-remainder, .product-list-bought {
 	display: flex;
   	align-items: center;
   	justify-content: left;
+	flex-wrap: wrap;
+
 }
 
 .product-card {
 	background-color: rgb(232, 232, 232);
-	display: inline-block;
+	display: flex;
 	height: 25px;
 	padding: 5px;
 	border-radius: 5px;
-	margin-right: 5px;
+	margin: 5px;
 }
 
 .product-card-amount {
