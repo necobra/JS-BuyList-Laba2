@@ -23,6 +23,7 @@ body {
 	width: 37%;
 }
 
+
 /* general styles */
 
 .inline-container {
@@ -96,11 +97,6 @@ button:hover {
 	width: 60%;
 }
 
-@media (max-width: 750px) {
-	.amount {
-		justify-content: left;
-	}
-}
 
 .amount > div {
 	padding: 10px;
@@ -250,6 +246,61 @@ button:hover {
 	margin-left: 5px;
 }
 
+/* */
+
+.badge {
+	position: fixed;
+	bottom: 0px;
+	height: 23px;
+
+	background-color: blueviolet;
+	padding: 5px;
+	border-radius: 5px 5px 0px 0px;
+
+	color: white;
+
+	transition: all 1s ease;
+}
+
+.badge:hover {
+	height: 70px;
+
+	background-color: darkblue;
+
+	transition: all 1s ease;
+	
+}
+
+.badge-caption {
+	
+	font-weight: bold;
+	text-align: center;
+	font-size: large;
+}
+
+.badge-created-by {
+	margin: 10px;
+	font-size: 10px;
+}
+
+.badge-author-name {
+	font-size: 14px;
+}
+
+@media print {
+	.badge {
+		border: thin solid  purple;
+		height: 40px;
+	}
+
+	.badge-caption {
+		display: none;
+	}
+
+	.badge-created-by {
+		margin: 5px;
+	}
+}
 /* additinal styles */
 
 #invisible {
@@ -260,3 +311,21 @@ button:hover {
 	display: none;
 }
 
+@media (max-width: 750px) {
+	.amount {
+		justify-content: left;
+	}
+}
+
+@media (max-width: 500px) {
+	.panels {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.left-panel, .right-panel {
+		width: 100%;
+	}
+	.amount {
+		justify-content: center;
+	}
+}
