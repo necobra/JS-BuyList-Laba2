@@ -4,10 +4,11 @@ body {
 
 .panels {
 	display: flex;
-    justify-content: space-between 
+	justify-content: space-between
 }
 
-.left-panel, .right-panel {
+.left-panel,
+.right-panel {
 	background-color: white;
 	float: left;
 	margin: 1%;
@@ -19,7 +20,7 @@ body {
 	min-width: 320px;
 }
 
-.right-panel  {
+.right-panel {
 	width: 37%;
 }
 
@@ -34,7 +35,7 @@ body {
 	height: 40px
 }
 
-.inline-container > div {
+.inline-container>div {
 	height: 100%;
 	display: flex;
 }
@@ -61,7 +62,7 @@ button:hover {
 
 .add {
 	display: flex;
-	background-color:rgb(34, 133, 208);
+	background-color: rgb(34, 133, 208);
 	box-shadow: 0px 5px 0px 0px rgb(34, 118, 183);
 	border-radius: 0px 5px 5px 0px;
 	color: white;
@@ -77,14 +78,13 @@ button:hover {
 
 /* product style */
 
-.product{
-	
-    justify-content: space-between;
+.product {
+
+	justify-content: space-between;
 
 }
 
-.product-name
- {
+.product-name {
 	display: flex;
 	align-items: center;
 	width: 20%;
@@ -98,7 +98,7 @@ button:hover {
 }
 
 
-.amount > div {
+.amount>div {
 	padding: 10px;
 }
 
@@ -109,7 +109,7 @@ button:hover {
 	align-items: center;
 }
 
-.acts > button {
+.acts>button {
 	margin-left: 5px;
 }
 
@@ -126,7 +126,9 @@ button:hover {
 	font-weight: bold;
 }
 
-.minus, .plus {
+.minus,
+.plus,
+.minus-unactive {
 	display: inline-block;
 	text-align: center;
 	border-radius: 25px;
@@ -145,6 +147,11 @@ button:hover {
 	box-shadow: 0px 3px 0px 0px rgb(122, 24, 24);
 }
 
+.minus-unactive {
+	background-color: rgb(224, 97, 97);
+	box-shadow: 0px 3px 0px 0px rgb(130, 52, 52);
+}
+
 .plus {
 	background-color: rgb(34, 186, 70);
 	box-shadow: 0px 3px 0px 0px rgb(27, 137, 53);
@@ -155,7 +162,8 @@ button:hover {
 	box-shadow: 0px 3px 0px 0px rgb(19, 97, 38);
 }
 
-.btn-bought, .btn-no-bought{
+.btn-bought,
+.btn-no-bought {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -172,7 +180,8 @@ button:hover {
 	padding: 0px 10 px;
 }
 
-.btn-bought:hover, .btn-no-bought:hover{
+.btn-bought:hover,
+.btn-no-bought:hover {
 	background-color: rgb(220, 218, 218);
 	box-shadow: 0px 3px 0px 0px rgb(150, 149, 149);
 }
@@ -197,6 +206,7 @@ button:hover {
 	background-color: rgb(177, 32, 32);
 	box-shadow: 0px 3px 0px 0px rgb(131, 26, 26);
 }
+
 /* */
 
 .right-panel .inline-container {
@@ -206,20 +216,21 @@ button:hover {
 
 .caption {
 	display: flex;
-  	align-items: center;
-  	justify-content: left;
+	align-items: center;
+	justify-content: left;
 
 	font-weight: bold;
 	font-size: 1.2em;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 	margin-top: 5px;
 }
 
-.product-list-remainder, .product-list-bought {
+.product-list-remainder,
+.product-list-bought {
 	display: flex;
-  	align-items: center;
-  	justify-content: left;
+	align-items: center;
+	justify-content: left;
 	flex-wrap: wrap;
 
 }
@@ -236,7 +247,7 @@ button:hover {
 .product-card-amount {
 	background-color: rgb(242, 113, 29);
 	border-radius: 10px;
-	
+
 	display: inline-block;
 	height: 20px;
 	width: 20px;
@@ -268,11 +279,11 @@ button:hover {
 	background-color: darkblue;
 
 	transition: all 1s ease;
-	
+
 }
 
 .badge-caption {
-	
+
 	font-weight: bold;
 	text-align: center;
 	font-size: large;
@@ -289,7 +300,7 @@ button:hover {
 
 @media print {
 	.badge {
-		border: thin solid  purple;
+		border: thin solid purple;
 		height: 40px;
 	}
 
@@ -301,6 +312,27 @@ button:hover {
 		margin: 5px;
 	}
 }
+
+/* */
+
+[data-tooltip] {
+	position: relative;
+	cursor: pointer;
+}
+
+[data-tooltip]:hover::before {
+	content: attr(data-tooltip);
+	position: absolute;
+	background-color: violet;
+	color: white;
+	border-radius: 5px;
+	padding: 5px;
+	top: -30px;
+	left: 50%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+
 /* additinal styles */
 
 #invisible {
@@ -322,9 +354,12 @@ button:hover {
 		display: flex;
 		flex-wrap: wrap;
 	}
-	.left-panel, .right-panel {
+
+	.left-panel,
+	.right-panel {
 		width: 100%;
 	}
+
 	.amount {
 		justify-content: center;
 	}
