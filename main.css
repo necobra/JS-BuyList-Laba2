@@ -3,6 +3,7 @@ body {
 }
 
 .panels {
+	margin-top: 15px;
 	display: flex;
 	justify-content: space-between
 }
@@ -320,7 +321,7 @@ button:hover {
 	cursor: pointer;
 }
 
-[data-tooltip]:hover::before {
+[data-tooltip]::before {
 	content: attr(data-tooltip);
 	position: absolute;
 	background-color: violet;
@@ -331,6 +332,12 @@ button:hover {
 	left: 50%;
 	transform: translateX(-50%);
 	white-space: nowrap;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+[data-tooltip]:hover::before {
+	opacity: 1;
 }
 
 /* additinal styles */
